@@ -1,0 +1,191 @@
+<!-- Top Bar -->
+<div class="bg-wildlife-green-dark text-white text-sm py-2">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+      <div>Serving Palm Beach & Broward County</div>
+      <div class="flex items-center gap-4 text-xs">
+        <span>Free Quote • Video Inspection • $50 Off</span>
+        <a
+          href="index.html#quote"
+          data-cta="topbar_quote"
+          class="underline hover:text-wildlife-accent transition"
+          >Request Free Quote</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Sticky Header -->
+<header
+  id="main-header"
+  class="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm backdrop-blur-sm bg-white/95"
+  x-data="{ mobileMenuOpen: false }"
+>
+  <div class="container mx-auto px-4 max-w-7xl">
+    <div class="flex items-center justify-between h-20 md:h-24">
+      <!-- Mobile Hamburger + Logo -->
+      <div class="flex items-center gap-3 lg:gap-0">
+        <!-- Mobile Hamburger Menu -->
+        <button
+          @click="mobileMenuOpen = !mobileMenuOpen"
+          class="lg:hidden p-2 text-gray-700 hover:text-wildlife-green transition"
+          aria-label="Toggle menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            x-show="!mobileMenuOpen"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            x-show="mobileMenuOpen"
+            x-cloak
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <!-- Logo -->
+        <a
+          href="index.html"
+          class="text-2xl md:text-3xl font-bold text-wildlife-green tracking-tight"
+        >
+          Wildlife Troopers
+        </a>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-10">
+        <a
+          href="services.html"
+          class="nav-link text-gray-700 font-medium text-base"
+          >Services</a
+        >
+        <a
+          href="index.html#process"
+          class="nav-link text-gray-700 font-medium text-base"
+          >Process</a
+        >
+        <a
+          href="index.html#reviews"
+          class="nav-link text-gray-700 font-medium text-base"
+          >Reviews</a
+        >
+        <a
+          href="index.html#faq"
+          class="nav-link text-gray-700 font-medium text-base"
+          >FAQ</a
+        >
+        <a
+          href="index.html#areas"
+          class="nav-link text-gray-700 font-medium text-base"
+          >Service Areas</a
+        >
+        <a
+          href="index.html#contact"
+          class="nav-link text-gray-700 font-medium text-base"
+          >Contact</a
+        >
+      </nav>
+
+      <!-- CTAs -->
+      <div class="flex items-center gap-4">
+        <a
+          href="tel:+15618094572"
+          data-cta="header_call"
+          class="btn-primary bg-wildlife-accent text-wildlife-green-dark px-4 md:px-6 py-2.5 md:py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-yellow-400 transition min-h-[44px] md:min-h-[48px] flex items-center justify-center shadow-lg shadow-wildlife-accent/20"
+        >
+          Call Now
+        </a>
+        <a
+          href="index.html#quote"
+          data-cta="header_quote"
+          class="hidden md:block bg-white text-wildlife-green border-2 border-wildlife-green px-5 py-2.5 rounded-xl font-semibold text-base hover:bg-gray-50 transition min-h-[44px] flex items-center justify-center"
+        >
+          Request Free Quote
+        </a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div
+      x-show="mobileMenuOpen"
+      x-cloak
+      @click.away="mobileMenuOpen = false"
+      class="lg:hidden border-t border-gray-200 mt-0"
+      x-transition:enter="transition ease-out duration-200"
+      x-transition:enter-start="opacity-0 transform -translate-y-2"
+      x-transition:enter-end="opacity-100 transform translate-y-0"
+      x-transition:leave="transition ease-in duration-150"
+      x-transition:leave-start="opacity-100 transform translate-y-0"
+      x-transition:leave-end="opacity-0 transform -translate-y-2"
+    >
+      <nav class="py-4 space-y-2">
+        <a
+          href="services.html"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >Services</a
+        >
+        <a
+          href="index.html#process"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >Process</a
+        >
+        <a
+          href="index.html#reviews"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >Reviews</a
+        >
+        <a
+          href="index.html#faq"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >FAQ</a
+        >
+        <a
+          href="index.html#areas"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >Service Areas</a
+        >
+        <a
+          href="index.html#contact"
+          @click="mobileMenuOpen = false"
+          class="block px-4 py-3 text-gray-700 font-medium hover:bg-gray-50 hover:text-wildlife-green transition rounded-lg"
+          >Contact</a
+        >
+        <!-- Request Free Quote Button for Mobile -->
+        <div class="pt-2 border-t border-gray-200 mt-2">
+          <a
+            href="index.html#quote"
+            data-cta="mobile_nav_quote"
+            @click="mobileMenuOpen = false"
+            class="block w-full text-center bg-white text-wildlife-green border-2 border-wildlife-green px-5 py-3 rounded-xl font-semibold text-base hover:bg-gray-50 transition min-h-[48px] flex items-center justify-center"
+          >
+            Request Free Quote
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
